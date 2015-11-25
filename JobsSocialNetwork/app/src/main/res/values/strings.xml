@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JobsSocialNetwork</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_enterprise_sign_up">EnterpriseSignUp</string>
+    <string name="title_activity_reset_password">ResetPassword</string>
+    <string name="title_activity_main_view">MainView</string>
+    <string name="title_activity_job_detail">JobDetailActivity</string>
+    <string name="title_activity_employee_update_information">EmployeeUpdateInformation</string>
+    <string name="title_activity_employee_personal_page">EmployeePersonalPage</string>
+    <string name="title_activity_employee_cvpreview">EmployeeCVPreview</string>
+    <string name="title_activity_employee_list_friends">EmployeeListFriends</string>
+    <string name="title_activity_activity_inbox">ActivityInbox</string>
+    <string name="title_activity_enterprise_main">EnterpriseMain</string>
+</resources>

@@ -1,0 +1,234 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.login.EnterpriseSignUp">
+
+    <TextView
+        android:id="@+id/tvEnterpriseSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Enterprise Sign Up"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@id/tvEnterpriseSignUp"
+        android:layout_alignRight="@id/tvEnterpriseSignUp"
+        android:layout_below="@id/tvEnterpriseSignUp"
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tvEnterpriseSignUp"
+        android:layout_alignRight="@id/tvEnterpriseSignUp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="-75dp"
+        android:layout_marginRight="-75dp">
+
+        <TableRow
+            android:id="@+id/tbrEmailEnterprise"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/email" />
+
+            <EditText
+                android:id="@+id/edtEmailEnterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:hint="Email"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrEmailEnterprise"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/password" />
+
+            <EditText
+                android:id="@+id/edtPasswordEnterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:hint="Password"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrPassword"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/confirm_password" />
+
+            <EditText
+                android:id="@+id/edtConfirmPasswordEnterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:hint="Confirm password"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrEnterpriseName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrConfirmPassword"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/brand" />
+
+            <EditText
+                android:id="@+id/edtNameEnterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:hint="Enterprise's Name"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrBirthDay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrEnterpriseName"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/birthday" />
+
+            <EditText
+                android:id="@+id/edtDateEstablishEnterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:hint="Established Date"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrGender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrBirthDay"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/target" />
+
+            <Spinner
+                android:id="@+id/spinerTypeOfEnterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"></Spinner>
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrGender"
+            android:layout_marginTop="10dp"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/btEnterpriseSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Submit" />
+
+        </TableRow>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

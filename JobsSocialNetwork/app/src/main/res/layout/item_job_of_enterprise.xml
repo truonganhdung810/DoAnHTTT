@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#ded992">
+
+
+    <TextView
+        android:id="@+id/tvJobName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="Job's name"
+        android:textSize="35px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEnterpriseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJobName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:lines="2"
+        android:text="Enterprise's Name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="10 mins ago"
+        android:textSize="20px" />
+
+    <TextView
+        android:id="@+id/tv_enterprise_job_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="Trạng thái:" />
+
+    <TextView
+        android:id="@+id/tv_enterprise_job_number_employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_enterprise_job_status_label"
+        android:layout_marginRight="10dp"
+        android:text="10 CV apply" />
+</RelativeLayout>

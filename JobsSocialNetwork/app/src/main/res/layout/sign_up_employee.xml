@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app">
+
+    <TextView
+        android:id="@+id/tvEmployeeSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Employee Sign Up"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@id/tvEmployeeSignUp"
+        android:layout_alignRight="@id/tvEmployeeSignUp"
+        android:layout_below="@id/tvEmployeeSignUp"
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tvEmployeeSignUp"
+        android:layout_alignRight="@id/tvEmployeeSignUp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="-75dp"
+        android:layout_marginRight="-75dp">
+
+        <TableRow
+            android:id="@+id/tbrEmailEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/email" />
+
+            <EditText
+                android:id="@+id/edtEmailEmployee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrEmailEmployee"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/password" />
+
+            <EditText
+                android:id="@+id/edtPasswordEmployee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrPassword"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/confirm_password" />
+
+            <EditText
+                android:id="@+id/edtConfirmPasswordEmployee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrBirthDay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrConfirmPassword"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/birthday" />
+
+            <EditText
+                android:id="@+id/edtBirthDay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:paddingBottom="5dp"
+                android:textColor="#ffffff" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrGender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrBirthDay"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/gender" />
+
+            <RadioGroup
+                android:id="@+id/rdgroupGender"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdbtMale"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Male"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/rdbtFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Female"
+                    android:textColor="#ffffff" />
+            </RadioGroup>
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrGender"
+            android:layout_marginTop="10dp"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/btEmployeeSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Submit" />
+
+        </TableRow>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

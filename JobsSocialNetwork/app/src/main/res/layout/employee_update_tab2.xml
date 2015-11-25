@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/tbrCVProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvCVProfileTitleRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Profile"
+                    android:textColor="@color/cyan_tabbar"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgvProfileButtonDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvCVProfileTitleRow"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/tvCVProfileTitleRow"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/detail_cv" />
+
+                <RelativeLayout
+                    android:id="@+id/rltContentProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCVProfileTitleRow"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgvAvatarProfileCV"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/imgvAvatarProfileCV"
+                        android:layout_alignTop="@id/imgvAvatarProfileCV"
+                        android:layout_toLeftOf="@id/imgvAvatarProfileCV"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/tvPhoneNumberProfileCV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:text="0123 456 789"
+                            android:textSize="18dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tvJobProfileCV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvPhoneNumberProfileCV"
+                            android:layout_alignParentRight="true"
+                            android:text="Mobile Developer"
+                            android:textSize="18dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tvNameProfileCV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvJobProfileCV"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:singleLine="false"
+                            android:text="Đỗ Trường Giang"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltAddressProfleCV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgvAvatarProfileCV"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvLabelAddressProfileCV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Address:"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/tvLabelAddressProfileCV"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="Số 10, ngõ 158, Trương Định, Hai Bà Trưng, Hà Nội"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltContactProfleCV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rltAddressProfleCV"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvLabelContactProfileCV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Contact:"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvEmailContactProfileCV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/tvLabelContactProfileCV"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="truonganhdung810@gmail.com"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgvEditProfileCV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/rltContactProfleCV"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/edit_content" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltCVProfileEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgvEditProfileCV"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvProfileEditName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Họ tên: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtProfileEditName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/tvProfileEditName"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/tvProfileEditJob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/edtProfileEditName"
+                            android:layout_marginTop="5dp"
+                            android:text="Công việc: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtProfileEditJob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/edtProfileEditName"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/tvProfileEditJob"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/tvProfileEditPhoneNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/edtProfileEditJob"
+                            android:layout_marginTop="5dp"
+                            android:text="Số điện thoại: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtProfileEditPhoneNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/edtProfileEditJob"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/tvProfileEditPhoneNumber"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/tvProfileEditAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/edtProfileEditPhoneNumber"
+                            android:layout_marginTop="5dp"
+                            android:text="Địa chỉ: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtProfileEditAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/edtProfileEditPhoneNumber"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/tvProfileEditAddress"
+                            android:singleLine="false" />
+
+                        <TextView
+                            android:id="@+id/tvProfileEditEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/edtProfileEditAddress"
+                            android:layout_marginTop="5dp"
+                            android:text="Email: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtProfileEditEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/edtProfileEditAddress"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/tvProfileEditEmail"
+                            android:singleLine="false" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tbrCVEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrCVProfile">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/tvCVEducationTitleRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Education"
+                    android:textColor="@color/cyan_tabbar"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgvEducationButtonDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvCVEducationTitleRow"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/tvCVEducationTitleRow"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/detail_cv" />
+
+                <RelativeLayout
+                    android:id="@+id/rltContentEducation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCVEducationTitleRow"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rltEducationRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvEducationTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2016: "
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvEducationGraduateAtTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/tvEducationTime1"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="Tốt nghiệp đại học Bách Khoa HN. \nChuyên ngành hệ thống thông tin tuyền thông. \nKết quả: Khá."
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltEducationRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rltEducationRow1"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvEducationTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2011: "
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvEducationGraduateAtTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/tvEducationTime2"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="Tốt nghiệp THPT Quảng Xương 1. \nKết quả: Giỏi."
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgvEditEducationCV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/rltEducationRow2"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/edit_content" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltCVEducationEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgvEditEducationCV"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvEducationEditTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Năm: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtEducationEditTime1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvEducationEditTime1"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+                        <TextView
+                            android:id="@+id/tvEducationEditGraduateAtTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/tvEducationEditTime1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/edtEducationEditTime1"
+                            android:text="Nội dung: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtEducationEditGraduateAtTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/tvEducationEditGraduateAtTime1"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tvEducationEditGraduateAtTime1"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+
+                        <TextView
+                            android:id="@+id/tvEducationEditTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/edtEducationEditGraduateAtTime1"
+                            android:layout_marginTop="5dp"
+                            android:text="Năm: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtEducationEditTime2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvEducationEditTime2"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+                        <TextView
+                            android:id="@+id/tvEducationEditGraduateAtTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/tvEducationEditTime2"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/edtEducationEditTime2"
+                            android:text="Nội dung: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtEducationEditGraduateAtTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/tvEducationEditGraduateAtTime2"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tvEducationEditGraduateAtTime2"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tbrCVExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrCVEducation">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/tvCVExperienceTitleRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Experience"
+                    android:textColor="@color/cyan_tabbar"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgvExperienceButtonDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvCVExperienceTitleRow"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/tvCVExperienceTitleRow"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/detail_cv" />
+
+                <RelativeLayout
+                    android:id="@+id/rltContentExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCVExperienceTitleRow"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rltExperienceRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvExperienceTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2014 - 2015: "
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvExperienceAtTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/tvExperienceTime1"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="Thực tập viên tại Vườn Ươm Tinh Vân. \nVị trí: Leader\nTrực tiếp tham gia vào xây dựng 5 ứng dụng Mobile."
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltExperienceRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rltExperienceRow1"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvExperienceTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2013 - 2014: "
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvExperienceAtTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/tvExperienceTime2"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="Học lập trình Android tại trung tâm đào tạo lập trình viên công nghệ thông tin T3H. \nKết quả: Giỏi."
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgvEditExperienceCV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/rltExperienceRow2"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/edit_content" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltCVEperienceEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgvEditExperienceCV"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvExperienceEditTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời gian: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtExperienceEditTime1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvExperienceEditTime1"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+                        <TextView
+                            android:id="@+id/tvExperienceEditGainAtTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/tvExperienceEditTime1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/edtExperienceEditTime1"
+                            android:text="Kinh nghiệm: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtExperienceEditGainAtTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/tvExperienceEditGainAtTime1"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tvExperienceEditGainAtTime1"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+
+                        <TextView
+                            android:id="@+id/tvExperienceEditTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/edtExperienceEditGainAtTime1"
+                            android:layout_marginTop="5dp"
+                            android:text="Thời gian: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtExperienceEditTime2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvExperienceEditTime2"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+                        <TextView
+                            android:id="@+id/tvExperienceEditGainAtTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/tvExperienceEditTime2"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/edtExperienceEditTime2"
+                            android:text="Kinh nghiệm: "
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edtExperienceEditGainAtTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/tvExperienceEditGainAtTime2"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tvExperienceEditGainAtTime2"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/tbrCVSkill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrCVExperience">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/tvCVSkillTitleRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Skill"
+                    android:textColor="@color/cyan_tabbar"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgvSkillButtonDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvCVSkillTitleRow"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/tvCVSkillTitleRow"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/detail_cv" />
+
+                <RelativeLayout
+                    android:id="@+id/rltContentSkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCVSkillTitleRow"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rltSkillRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvSkillForeignLanguageLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ngoại ngữ"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSkillForeignLanguage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/tvSkillForeignLanguageLabel"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="Tiếng Anh: TOEIC 500"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltSkillRow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rltSkillRow1"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tvSkillSoftLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kỹ năng mềm "
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSkillSoft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/tvSkillSoftLabel"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="Kỹ năng thuyết trình : Tốt\nTự tin trước đám đông. \nKhả năng lãnh đạo: Khá \nKhả năng tự học: Tốt."
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgvEditSkillCV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/rltSkillRow2"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/edit_content" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltCVSkillEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgvEditSkillCV"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/tvCVSkillEditForeignLanguage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ngoại ngữ: " />
+
+                        <EditText
+                            android:id="@+id/edtCVSkillEditForeignLanguage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvCVSkillEditForeignLanguage"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+                        <TextView
+                            android:id="@+id/tvCVSkillEditSoftSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/edtCVSkillEditForeignLanguage"
+                            android:layout_marginTop="10dp"
+                            android:text="Kỹ năng mềm: " />
+
+                        <EditText
+                            android:id="@+id/edtCVSkillEditSoftSkill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvCVSkillEditSoftSkill"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tbrCVOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrCVSkill">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/tvCVOtherTitleRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Other"
+                    android:textColor="@color/cyan_tabbar"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgvOtherButtonDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvCVOtherTitleRow"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/tvCVOtherTitleRow"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/detail_cv" />
+
+                <RelativeLayout
+                    android:id="@+id/rltContentOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCVOtherTitleRow"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvOtherContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:text="Sở thích: Nghe nhạc, đá bóng \nĐam mê: Lập trình"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/imgvEditOtherCV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/tvOtherContent"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/edit_content" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltCVOtherEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgvEditOtherCV"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/tvCVOtherEditContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Những thông tin khác: " />
+
+                        <EditText
+                            android:id="@+id/edtCVOtherContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvCVOtherEditContent"
+                            android:layout_marginTop="5dp"
+                            android:singleLine="false" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/rltContentOther"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#000000" />
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btCVUpdateSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tbrCVOther"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Submit" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

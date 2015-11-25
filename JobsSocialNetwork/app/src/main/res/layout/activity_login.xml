@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tvNameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Welcome to Jobs Social Network"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@id/tvNameApp"
+        android:layout_alignRight="@id/tvNameApp"
+        android:layout_below="@id/tvNameApp"
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/tvNameApp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/icon_app" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/tvResetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dp"
+        android:text="Reset password"
+        android:textColor="#FFFFFF" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tvNameApp"
+        android:layout_alignRight="@id/tvNameApp"
+        android:layout_below="@id/tvNameApp"
+        android:layout_marginLeft="-50dp"
+        android:layout_marginRight="-50dp"
+        android:layout_marginTop="150dp">
+
+        <TableRow
+            android:id="@+id/tbrEmailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/email" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:text="truonganhdung810@gmail.com" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrEmailLogin"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tbr"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/password" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/background_tbr"
+                android:paddingBottom="5dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tbrRememberLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrPassword"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_tbr"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="4">
+
+            <CheckBox
+                android:id="@+id/cbkMaleEmployee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/background_tbr"
+                android:buttonTint="#ffffff"
+                android:text="Remember"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/cbkFemaleEmployee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/background_tbr"
+                android:buttonTint="#ffffff"
+                android:text="Auto Login"
+                android:textColor="#ffffff" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tbrRememberLogin"
+            android:layout_marginTop="10dp"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/btLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Login" />
+
+        </TableRow>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.do_an_httt.truon_000.jobssocialnetwork" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.EmployeeSignUp"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".login.EnterpriseSignUp"
+            android:label="@string/title_activity_enterprise_sign_up" />
+        <activity
+            android:name=".login.ResetPassword"
+            android:label="@string/title_activity_reset_password" />
+        <activity
+            android:name=".main.employee.ActivityMainView"
+            android:label="@string/title_activity_main_view" />
+        <activity
+            android:name=".main.employee.ActivityJobDetail"
+            android:label="@string/title_activity_job_detail" />
+        <activity
+            android:name=".main.employee.ActivityEmployeeUpdateInformation"
+            android:label="@string/title_activity_employee_update_information" />
+        <activity
+            android:name=".main.employee.ActivityEmployeePersonalPage"
+            android:label="@string/title_activity_employee_personal_page" />
+        <activity
+            android:name=".main.employee.ActivityEmployeeCVPreview"
+            android:label="@string/title_activity_employee_cvpreview" />
+        <activity
+            android:name=".main.employee.ActivityEmployeeListFriends"
+            android:label="@string/title_activity_employee_list_friends" />
+        <activity
+            android:name=".main.employee.ActivityInbox"
+            android:label="@string/title_activity_activity_inbox" />
+        <activity
+            android:name=".main.enterprise.EnterpriseMain"
+            android:label="@string/title_activity_enterprise_main" >
+        </activity>
+    </application>
+
+</manifest>

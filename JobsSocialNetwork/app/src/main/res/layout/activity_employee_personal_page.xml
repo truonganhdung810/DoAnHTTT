@@ -1,0 +1,304 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.employee.ActivityEmployeePersonalPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rltPersonalPageCoverAndAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#debb1e" />
+
+                <ImageView
+                    android:id="@+id/imgvAvatarEmployee"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/imgvAvatarEmployee"
+                    android:layout_alignTop="@id/imgvAvatarEmployee"
+                    android:layout_toRightOf="@id/imgvAvatarEmployee">
+
+                    <TextView
+                        android:id="@+id/tvNameEmployee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:text="Truong Anh Dung"
+                        android:textColor="#ffffff"
+                        android:textSize="30px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvEmailEmployee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvNameEmployee"
+                        android:singleLine="true"
+                        android:text="truonganhdung810@gmail.com"
+                        android:textColor="#ffffff"
+                        android:textSize="20px"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltPersonalPageOptionMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rltPersonalPageCoverAndAvatar">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btPersonalPageAddFriend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+ Kết bạn" />
+
+                    <Button
+                        android:id="@+id/btPersonalPageMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tin nhắn" />
+
+                </TableRow>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltPersonalPageContentInformation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rltPersonalPageOptionMenu">
+
+                <RelativeLayout
+                    android:id="@+id/rltPersonalPagePersonalInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvCVOtherTitleRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Thông tin cá nhân"
+                        android:textColor="@color/cyan_tabbar"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgvPersonalInformationButtonDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tvCVOtherTitleRow"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/tvCVOtherTitleRow"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/detail_cv" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltContentPersonalInformation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvCVOtherTitleRow"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvPersonalInformationContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:text="Sở thích: Nghe nhạc, đá bóng \nĐam mê: Lập trình"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltPersonalPageListEnterpriseFollow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rltPersonalPagePersonalInformation">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvListEnterpriseFollowTitleRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Công ty theo dõi"
+                        android:textColor="@color/cyan_tabbar"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgvListEnterpriseFollowButtonDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tvListEnterpriseFollowTitleRow"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/tvListEnterpriseFollowTitleRow"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/detail_cv" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltContentListEnterpriseFollow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvListEnterpriseFollowTitleRow"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="false"
+                                android:text="Danh sách các công ty đang theo dõi: " />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tbrPersonalPageCVPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rltPersonalPageListEnterpriseFollow">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvCVPreviewTitleRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="CV Preview"
+                        android:textColor="@color/cyan_tabbar"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgvCVPreviewButtonDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tvCVPreviewTitleRow"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/tvCVPreviewTitleRow"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/detail_cv" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltContentCVPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvCVPreviewTitleRow"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvClickToSeeCV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="false"
+                                android:text="Nhấn vào đây để xem CV" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/rltContentCVPreview"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#000000" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

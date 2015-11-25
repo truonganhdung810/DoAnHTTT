@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/tbrNameEmployeeUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tên hiển thị: "
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edtNameEmployeeUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:text="Lãnh Nguyệt Hàn" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tbrEmailEmployeeUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrNameEmployeeUpdate"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Email: "
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edtEmailEmployeeUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:enabled="false"
+                    android:singleLine="true"
+                    android:text="hanthien810@gmail.com" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tbrBirthdayEmployeeUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrEmailEmployeeUpdate"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ngày sinh: "
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edtBirthdayEmployeeUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:text="08/10/1993" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tbrGenderEmployeeUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrBirthdayEmployeeUpdate"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Giới tính: "
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/rdgroupGender"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rdbtMale"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Male"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/rdbtFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Female"
+                        android:textColor="#000000" />
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tbrAvatarEmployeeUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrGenderEmployeeUpdate"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="Avatar: "
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/imgvAvatarEmployeeUpdate"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/imgvAvatarEmployeeUpdate"
+                        android:src="@mipmap/upload_avatar" />
+
+                </RelativeLayout>
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tbrChangePassEmployeeUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrAvatarEmployeeUpdate"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Password: "
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edtChangePassEmployeeUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:text="******" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tbrConfirmEmployeeUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tbrChangePassEmployeeUpdate"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/btConfirmEmployeeUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:text="Xác nhận thay đổi" />
+
+            </TableRow>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

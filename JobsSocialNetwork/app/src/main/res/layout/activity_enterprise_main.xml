@@ -1,0 +1,59 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.EnterpriseMain">
+
+    <RelativeLayout
+        android:id="@+id/rlt_enterprise_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/tbrTopMenu"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/cyan_tabbar"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="0.7"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/menu" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.3"
+                android:gravity="center_vertical"
+                android:text="Các công việc đã đăng"
+                android:textColor="#ffffff"
+                android:textSize="35px"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <ListView
+            android:id="@+id/lvEnterpriseListJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tbrTopMenu">
+
+        </ListView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/cyan_tabbar"
+        android:id="@+id/rlt_enterprise_drawer_menu"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

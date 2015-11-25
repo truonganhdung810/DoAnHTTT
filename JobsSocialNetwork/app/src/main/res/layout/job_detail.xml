@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:id="@+id/tbrTopMenu"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/cyan_tabbar"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/imgvJobDetailBack"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.7"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.3"
+            android:gravity="center_vertical"
+            android:text="Chi tiết công việc"
+            android:textColor="#ffffff"
+            android:textSize="35px"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <RelativeLayout
+        android:id="@+id/rltJobDetailTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbrTopMenu"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tvDangTuyenBoiAi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Đăng tuyển bởi:"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/tv_jobdetail_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="2 ngày trước"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/tv_jobdetail_enterprise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDangTuyenBoiAi"
+            android:text="MFA JSC"
+            android:textSize="35px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_jobdetail_email_enterprise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_jobdetail_enterprise"
+            android:text="mfa_tuyendung@gmail.com"
+            android:textSize="25px"
+            android:textStyle="bold" />
+
+        <TableRow
+            android:id="@+id/tbrButtonOptionTop"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_below="@id/tv_jobdetail_email_enterprise"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/bt_jobdetail_view_enterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="View"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/bt_jobdetail_message_to_enterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="Message"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/bt_jobdetail_follow_this_enterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Follow"
+                android:textSize="12dp" />
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tbrButtonOptionTop"
+            android:layout_marginTop="5dp"
+            android:background="#000000" />
+
+    </RelativeLayout>
+
+
+    <TableRow
+        android:id="@+id/rltJobDetailBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/bt_jobdetail_apply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Apply" />
+
+        <Button
+            android:id="@+id/bt_jobdetal_share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Share" />
+
+        <Button
+            android:id="@+id/bt_jobdetal_add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Add" />
+
+    </TableRow>
+
+    <RelativeLayout
+        android:id="@+id/rltJobDetailMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rltJobDetailBottom"
+        android:layout_below="@id/rltJobDetailTop"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_jobdetail_jobname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job's Name"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_jobdetail_enterprise_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_jobdetail_jobname"
+            android:singleLine="true"
+            android:text="MFA JSC - Công ty thương mại cổ phần JSC"
+            android:textSize="14dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_jobdetail_enterprise_fullname"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/tv_jobdtail_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nội dung chi tiết công việc "
+                android:textSize="14dp" />
+
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#000000" />
+
+    </RelativeLayout>
+</RelativeLayout>
