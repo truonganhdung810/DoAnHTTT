@@ -16,5 +16,4 @@ public class ProjectManagement {
     public static Enterprise enterprise;
     public static ArrayList<Job> alljobs;
 
-
 }

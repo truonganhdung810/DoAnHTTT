@@ -1,4 +1,4 @@
-package com.do_an_httt.truon_000.jobssocialnetwork.main.employee;
+package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.JobItem;
 
 import java.util.ArrayList;
 

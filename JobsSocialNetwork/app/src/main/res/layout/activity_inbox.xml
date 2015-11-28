@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.employee.ActivityInbox">
+    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityInbox">
 
     <TableRow
         android:id="@+id/tbrTopMenu"
@@ -46,6 +46,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/slidingTabLayoutInbox"
-        android:background="#ffec58" />
+        android:background="#ffffff" />
 
 </RelativeLayout>

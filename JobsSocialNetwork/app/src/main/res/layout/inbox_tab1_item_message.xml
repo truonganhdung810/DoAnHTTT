@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/tvLabelFromInboxItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:text="From: "
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSenderInboxItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvLabelFromInboxItem"
+        android:background="@drawable/background_tv_name_message"
+        android:padding="2dp"
+        android:singleLine="true"
+        android:text="Anh Dũng Trương"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tvTitleMessageFromInboxItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabelFromInboxItem"
+        android:singleLine="true"
+        android:text="[Share] Chia sẻ công việc cho bạn"
+        android:textSize="18dp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvContentInboxItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleMessageFromInboxItem"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="Lập trình viên IT, công ty thương mại cổ phẩn MCA"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/tvTimeMessageInboxItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvContentInboxItem"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Nov 25"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+</RelativeLayout>

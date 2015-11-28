@@ -3,9 +3,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="Hộp thư đến"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ListView
+        android:id="@+id/lvMessageInboxTab1Receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+    </ListView>
+
+
+    <RelativeLayout
+        android:id="@+id/rltMessageReceiverDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rltTopMessageDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_rlt_title_message"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvLabelFromInboxItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:text="From: "
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSenderInboxItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tvLabelFromInboxItem"
+                        android:background="@drawable/background_tv_name_message"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:text="Anh Dũng Trương"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTimeMessageInboxItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/tvSenderInboxItem"
+                        android:layout_marginTop="5dp"
+                        android:text="Nov 25 2016"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltTitleMessageDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rltTopMessageDetail"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_rlt_title_message"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvTitleMessageFromInboxItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:text="[Share] Chia sẻ công việc cho bạn"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tvTitleMessageFromInboxItem"
+                        android:layout_marginTop="2dp"
+                        android:background="#123456" />
+
+                    <TextView
+                        android:id="@+id/tvContentInboxItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTitleMessageFromInboxItem"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="false"
+                        android:text="Lập trình viên IT, công ty thương mại cổ phẩn MCA"
+                        android:textSize="18dp"
+                        android:textStyle="italic" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

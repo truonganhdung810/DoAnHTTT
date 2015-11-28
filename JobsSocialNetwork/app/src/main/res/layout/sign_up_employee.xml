@@ -54,6 +54,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:background="@color/background_tbr"
+                android:hint="Email"
                 android:paddingBottom="5dp"
                 android:textColor="#ffffff" />
 
@@ -83,6 +84,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:background="@color/background_tbr"
+                android:hint="Password"
                 android:paddingBottom="5dp"
                 android:textColor="#ffffff" />
 
@@ -112,6 +114,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:background="@color/background_tbr"
+                android:hint="Confirm Password"
                 android:paddingBottom="5dp"
                 android:textColor="#ffffff" />
 
@@ -141,6 +144,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:background="@color/background_tbr"
+                android:hint="Birthday"
                 android:paddingBottom="5dp"
                 android:textColor="#ffffff" />
 
@@ -200,10 +204,11 @@
             android:weightSum="5">
 
             <Button
+                android:textColor="#ffffff"
                 android:id="@+id/btEmployeeSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Submit" />
+                android:text="Sign Up" />
 
         </TableRow>
 

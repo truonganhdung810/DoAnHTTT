@@ -1,4 +1,4 @@
-package com.do_an_httt.truon_000.jobssocialnetwork.main.employee;
+package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityJobDetail;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.JobItem;
 
 import java.util.ArrayList;
 
@@ -30,7 +32,7 @@ public class TabsPagerAdapterMainViewListJobs extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     @Override
@@ -50,14 +52,18 @@ public class TabsPagerAdapterMainViewListJobs extends PagerAdapter {
         switch (position) {
 
             case 0:
+                view = LayoutInflater.from(context).inflate(R.layout.inbox_tab1_received, container, false);
+                break;
+
+            case 1:
                 view = LayoutInflater.from(context).inflate(R.layout.employee_listjobs_tab1, container, false);
                 initTab1(view);
                 break;
-            case 1:
+            case 2:
                 view = LayoutInflater.from(context).inflate(R.layout.employee_listjobs_tab1, container, false);
                 initTab2(view);
                 break;
-            case 2:
+            case 3:
                 view = LayoutInflater.from(context).inflate(R.layout.employee_listjobs_tab1, container, false);
                 initTab3(view);
                 break;
@@ -101,4 +107,5 @@ public class TabsPagerAdapterMainViewListJobs extends PagerAdapter {
     public void destroyItem(View container, int position, Object object) {
         ((ViewPager) container).removeView((View) object);
     }
+
 }

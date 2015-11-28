@@ -1,4 +1,4 @@
-package com.do_an_httt.truon_000.jobssocialnetwork.main.employee;
+package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
 import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.GetAllJobsAsyntask;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.TabsPagerAdapterMainViewListJobs;
 import com.do_an_httt.truon_000.jobssocialnetwork.view.SlidingTabLayout;
 
 
@@ -26,15 +28,23 @@ public class ActivityMainView extends Activity {
     private SlidingTabLayout slidingTabLayout;
     private TabsPagerAdapterMainViewListJobs tabsPagerAdapterMainViewListJobs;
 
+    private TextView tvTopMenuEMployeeMain;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.employee_main_view);
+        initLayout();
         initDrawerPersonal();
         initPagerListJobs();
         new GetAllJobsAsyntask(this).execute("");
 
+    }
+
+    private void initLayout() {
+        tvTopMenuEMployeeMain = (TextView) findViewById(R.id.tvTopMenuEmployee);
+      //  tvTopMenuEMployeeMain.setText(ProjectManagement.employee.name);
     }
 
 
@@ -48,6 +58,14 @@ public class ActivityMainView extends Activity {
         slidingTabLayout.setViewPager(pagerListJobs);
 
 
+    }
+
+    public void setTextTopMenuChangeToListJobs() {
+        tvTopMenuEMployeeMain.setText("Danh sách công việc");
+    }
+
+    public void setTextTopMenuChangeToInbox(){
+        tvTopMenuEMployeeMain.setText("Hộp thư đến");
     }
 
 

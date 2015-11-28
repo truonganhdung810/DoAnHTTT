@@ -31,6 +31,8 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityMainView;
+
 /**
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as to
  * the user's scroll progress.
@@ -79,7 +81,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
     private ViewPager mViewPager;
     private ViewPager.OnPageChangeListener mViewPagerPageChangeListener;
 
-    private String[] listStringTabs = new String[]{"Mới nhất", "Theo CV", "Theo dõi"};
+    private String[] listStringTabs = new String[]{"Hộp thư", "Mới nhất", "Theo CV", "Theo dõi"};
 
     private final SlidingTabStrip mTabStrip;
 
@@ -301,6 +303,29 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
             if (mViewPagerPageChangeListener != null) {
                 mViewPagerPageChangeListener.onPageSelected(position);
+            }
+
+            switch (position) {
+                case 0:
+                    new CustomToast(getContext(), "Tab 0", 500);
+                    ((ActivityMainView)getContext()).setTextTopMenuChangeToInbox();
+                    break;
+
+                case 1:
+                    new CustomToast(getContext(), "Tab 1", 500);
+                    ((ActivityMainView)getContext()).setTextTopMenuChangeToListJobs();
+                    break;
+
+                case 2:
+                    new CustomToast(getContext(), "Tab 2", 500);
+                    ((ActivityMainView)getContext()).setTextTopMenuChangeToListJobs();
+                    break;
+
+                case 3:
+                    new CustomToast(getContext(), "Tab 3", 500);
+                    ((ActivityMainView)getContext()).setTextTopMenuChangeToListJobs();
+                    break;
+
             }
         }
 

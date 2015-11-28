@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
-import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.AdapterListFriends;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
 
 import java.util.ArrayList;

@@ -6,19 +6,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
-import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.LoginAsyntask;
-import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.ActivityMainView;
-import com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.EnterpriseMain;
-import com.do_an_httt.truon_000.jobssocialnetwork.view.CustomToast;
-import com.example.nguyenhuungoc.connecttophp.ConnectToPHP;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityMainView;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
 

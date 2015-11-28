@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_app"
-    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.employee.ActivityMainView">
+    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityMainView">
 
     <RelativeLayout
         android:id="@+id/main_layout"
@@ -26,11 +26,12 @@
                 android:src="@mipmap/menu" />
 
             <TextView
+                android:id="@+id/tvTopMenuEmployee"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4.3"
                 android:gravity="center_vertical"
-                android:text="Danh sách công việc"
+                android:text="Hộp thư đến"
                 android:textColor="#ffffff"
                 android:textSize="35px"
                 android:textStyle="bold" />
@@ -51,6 +52,7 @@
             android:id="@+id/pagerListJobs"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#ffffff"
             android:layout_below="@id/slidingTabLayout">
 
         </android.support.v4.view.ViewPager>

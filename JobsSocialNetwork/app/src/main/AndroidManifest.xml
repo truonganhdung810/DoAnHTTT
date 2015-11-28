@@ -28,25 +28,25 @@
             android:name=".login.ResetPassword"
             android:label="@string/title_activity_reset_password" />
         <activity
-            android:name=".main.employee.ActivityMainView"
+            android:name=".main.employee.activity.ActivityMainView"
             android:label="@string/title_activity_main_view" />
         <activity
-            android:name=".main.employee.ActivityJobDetail"
+            android:name=".main.employee.activity.ActivityJobDetail"
             android:label="@string/title_activity_job_detail" />
         <activity
-            android:name=".main.employee.ActivityEmployeeUpdateInformation"
+            android:name=".main.employee.activity.ActivityEmployeeUpdateInformation"
             android:label="@string/title_activity_employee_update_information" />
         <activity
-            android:name=".main.employee.ActivityEmployeePersonalPage"
+            android:name=".main.employee.activity.ActivityEmployeePersonalPage"
             android:label="@string/title_activity_employee_personal_page" />
         <activity
-            android:name=".main.employee.ActivityEmployeeCVPreview"
+            android:name=".main.employee.activity.ActivityEmployeeCVPreview"
             android:label="@string/title_activity_employee_cvpreview" />
         <activity
-            android:name=".main.employee.ActivityEmployeeListFriends"
+            android:name=".main.employee.activity.ActivityEmployeeListFriends"
             android:label="@string/title_activity_employee_list_friends" />
         <activity
-            android:name=".main.employee.ActivityInbox"
+            android:name=".main.employee.activity.ActivityInbox"
             android:label="@string/title_activity_activity_inbox" />
         <activity
             android:name=".main.enterprise.EnterpriseMain"

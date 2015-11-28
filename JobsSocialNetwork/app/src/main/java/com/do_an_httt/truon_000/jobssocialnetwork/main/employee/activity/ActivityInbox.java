@@ -1,14 +1,12 @@
-package com.do_an_httt.truon_000.jobssocialnetwork.main.employee;
+package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity;
 
 import android.app.Activity;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
-import com.do_an_httt.truon_000.jobssocialnetwork.view.SlidingTabLayout;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.TabsPagerAdapterInbox;
 import com.do_an_httt.truon_000.jobssocialnetwork.view.SlidingTabLayoutInbox;
 
 public class ActivityInbox extends Activity {
@@ -36,6 +34,14 @@ public class ActivityInbox extends Activity {
 
         slidingTabLayoutInbox.setViewPager(viewPagerInboxTab);
 
+    }
 
+    @Override
+    public void onBackPressed() {
+        if (tabsPagerAdapterInbox.rltMessageDetail.getVisibility() == View.VISIBLE) {
+            tabsPagerAdapterInbox.doBackToListMessageFromDetail();
+            return;
+        }
+        super.onBackPressed();
     }
 }

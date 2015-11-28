@@ -281,6 +281,7 @@ public class SlidingTabLayoutInbox extends HorizontalScrollView {
                 mViewPagerPageChangeListener.onPageScrolled(position, positionOffset,
                         positionOffsetPixels);
             }
+
         }
 
         @Override
@@ -302,6 +303,26 @@ public class SlidingTabLayoutInbox extends HorizontalScrollView {
             if (mViewPagerPageChangeListener != null) {
                 mViewPagerPageChangeListener.onPageSelected(position);
             }
+
+            switch (position) {
+                case 0:
+                    new CustomToast(getContext(), "Tab 0", 500);
+                    break;
+
+                case 1:
+                    new CustomToast(getContext(), "Tab 1", 500);
+                    break;
+
+                case 2:
+                    new CustomToast(getContext(), "Tab 2", 500);
+                    break;
+
+                case 3:
+                    new CustomToast(getContext(), "Tab 3", 500);
+                    break;
+            }
+
+
         }
 
     }

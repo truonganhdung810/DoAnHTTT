@@ -1,4 +1,4 @@
-package com.do_an_httt.truon_000.jobssocialnetwork.main.employee;
+package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.AdapterListFriends;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.FriendItem;
 
 import java.util.ArrayList;
 

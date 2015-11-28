@@ -1,11 +1,11 @@
-package com.do_an_httt.truon_000.jobssocialnetwork.main.employee;
+package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
-import com.do_an_httt.truon_000.jobssocialnetwork.view.SlidingTabLayout;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.TabPagerAdapterEmployeeUpdate;
 import com.do_an_httt.truon_000.jobssocialnetwork.view.SlidingTabLayoutEmployeeUpdate;
 
 public class ActivityEmployeeUpdateInformation extends Activity {
