@@ -30,7 +30,6 @@
             android:textSize="35px"
             android:textStyle="bold" />
 
-
     </TableRow>
 
     <ListView

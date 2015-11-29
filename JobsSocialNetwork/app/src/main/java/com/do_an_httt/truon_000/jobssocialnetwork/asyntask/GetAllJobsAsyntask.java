@@ -49,7 +49,8 @@ public class GetAllJobsAsyntask extends AsyncTask<String, Void, Boolean> {
             Log.d("Result", ProjectManagement.alljobs.size() + "");
 
             for (Job job : ProjectManagement.alljobs) {
-                Log.d("Result", job.description);
+             //   Log.d("Result", job.description);
+                Log.d("Result", job.name_enterprise);
             }
 
         } else {

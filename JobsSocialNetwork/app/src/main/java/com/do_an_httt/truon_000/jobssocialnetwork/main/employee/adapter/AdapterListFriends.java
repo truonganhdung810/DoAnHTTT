@@ -1,6 +1,7 @@
 package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
+import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.GetAllFriendAsyntask;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.FriendItem;
 
 import java.util.ArrayList;
@@ -25,13 +27,13 @@ public class AdapterListFriends extends BaseAdapter {
     public AdapterListFriends(Context context, ArrayList<FriendItem> arrayFriends) {
 
         this.context = context;
-        this.arrayFriends = ProjectManagement.allfriends;
+        this.arrayFriends = arrayFriends;
 
     }
 
     @Override
     public int getCount() {
-        return 5;
+        return arrayFriends.size();
     }
 
     @Override
@@ -52,10 +54,11 @@ public class AdapterListFriends extends BaseAdapter {
         ImageView imgvAcceptFriend = (ImageView) convertView.findViewById(R.id.imgvAcceptFriend);
 
         FriendItem friend = arrayFriends.get(position);
-        if (friend.name.equals("null")) tvNameFriend.setText("Chưa cập nhật");
+        Log.d("Result", "ADAPTER: " + position + ":" + friend.name);
+        if (friend.name.equals("")) tvNameFriend.setText("Chưa cập nhật");
         else tvNameFriend.setText(friend.name);
         tvEmailFriend.setText(friend.email);
-        if (friend.status == 0) imgvAcceptFriend.setVisibility(View.VISIBLE);
+        if (friend.state == 0) imgvAcceptFriend.setVisibility(View.VISIBLE);
         else imgvAcceptFriend.setVisibility(View.GONE);
 
         return convertView;

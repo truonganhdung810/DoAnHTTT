@@ -4,8 +4,10 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.ListView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.AdapterListFriends;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.FriendItem;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
 import com.example.nguyenhuungoc.connecttophp.ConnectToPHP;
@@ -23,9 +25,11 @@ public class GetAllFriendAsyntask extends AsyncTask<String, Void, Boolean> {
     ProgressDialog dialog;
     String json;
     Context context;
+    ListView lvFriends;
 
-    public GetAllFriendAsyntask(Context context) {
+    public GetAllFriendAsyntask(Context context, ListView listView) {
         this.context = context;
+        this.lvFriends = listView;
     }
 
     @Override
@@ -49,8 +53,13 @@ public class GetAllFriendAsyntask extends AsyncTask<String, Void, Boolean> {
             Log.d("Result", ProjectManagement.allfriends.size() + "");
 
             for (FriendItem item_friend : ProjectManagement.allfriends) {
-                Log.d("Result", item_friend.email);
+                Log.d("Result", "Name: " + item_friend.name);
+                Log.d("Result", "Email: " + item_friend.email);
             }
+
+            AdapterListFriends adapterListFriends = new AdapterListFriends(context, ProjectManagement.allfriends);
+            lvFriends.setAdapter(adapterListFriends);
+
         } else {
             //that bai;
             Log.d("Result", "That bai");

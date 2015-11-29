@@ -7,11 +7,13 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
@@ -29,7 +31,8 @@ public class TabPagerAdapterEmployeeUpdate extends PagerAdapter implements View.
     private ImageView imgvProfileEdit, imgvEducationEdit, imgvExperienceEdit, imgvSkillEdit, imgvOtherEdit;
     private RelativeLayout rltProfileEdit, rltEducationEdit, rltExperienceEdit, rltSkillEdit, rltOtherEdit;
 
-    private EditText edtProfileName, edtProfileJob, edtProfilePhone, edtProfileAddress, edtProfileContact;
+    private EditText edtProfileName, edtProfilePhone, edtProfileAddress, edtProfileContact;
+    private Spinner spinnerProfileJob;
     private EditText edtEducationTime1, edtEducationGraduateAtTime1, edtEducationTime2, edtEducationGraduateAtTime2;
     private EditText edtExperienceTime1, edtExperienceAtTime1, edtExperienceTime2, edtExperienceAtTime2;
     private EditText edtSkillForeignLanguage, edtSkillSoftSkill;
@@ -147,7 +150,11 @@ public class TabPagerAdapterEmployeeUpdate extends PagerAdapter implements View.
         rltOtherEdit = (RelativeLayout) view.findViewById(R.id.rltCVOtherEdit);
 
         edtProfileName = (EditText) view.findViewById(R.id.edtProfileEditName);
-        edtProfileJob = (EditText) view.findViewById(R.id.edtProfileEditJob);
+        spinnerProfileJob = (Spinner) view.findViewById(R.id.spinnerProfileEditJob);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_item, ProjectManagement.listDomainJobs);
+        adapter.setDropDownViewResource
+                (android.R.layout.simple_list_item_single_choice);
+        spinnerProfileJob.setAdapter(adapter);
         edtProfilePhone = (EditText) view.findViewById(R.id.edtProfileEditPhoneNumber);
         edtProfileAddress = (EditText) view.findViewById(R.id.edtProfileEditAddress);
         edtProfileContact = (EditText) view.findViewById(R.id.edtProfileEditEmail);
@@ -238,7 +245,7 @@ public class TabPagerAdapterEmployeeUpdate extends PagerAdapter implements View.
 
     private void getStringFromEditText() {
         name = edtProfileName.getText().toString().trim();
-        job = edtProfileJob.getText().toString().trim();
+        job = String.valueOf(spinnerProfileJob.getSelectedItemPosition());
         phone = edtProfilePhone.getText().toString().trim();
         address = edtProfileAddress.getText().toString().trim();
         contact = edtProfileContact.getText().toString().trim();

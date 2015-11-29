@@ -21,6 +21,7 @@ import com.do_an_httt.truon_000.jobssocialnetwork.R;
 import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.CreateNewJobAsyntask;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.adapter.AdapterEnterpriseListJobs;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
+import com.do_an_httt.truon_000.jobssocialnetwork.view.CustomToast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -121,6 +122,8 @@ public class EnterpriseMain extends Activity implements View.OnClickListener {
 
         if (checkStringFromEditText(name, date, end_date, description, requirement)) {
             new CreateNewJobAsyntask(this).execute(email, name, date, end_date, description, requirement, domain);
+        } else {
+            new CustomToast(this, "Mẫu công việc không thõa mãn, hãy điền lại thông tin", 1000);
         }
 
     }

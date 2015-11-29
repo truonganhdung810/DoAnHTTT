@@ -26,16 +26,13 @@ public class ActivityEmployeeListFriends extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_list_friends);
 
-        new GetAllFriendAsyntask(this).execute(ProjectManagement.employee.email);
         initLayout();
+        new GetAllFriendAsyntask(this, lvListFriend).execute(ProjectManagement.employee.email);
 
     }
 
     private void initLayout() {
         lvListFriend = (ListView) findViewById(R.id.lvListFriend);
-        adapterListFriends = new AdapterListFriends(this, arrayFriend);
-        lvListFriend.setAdapter(adapterListFriends);
-
         lvListFriend.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

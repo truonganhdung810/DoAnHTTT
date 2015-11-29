@@ -17,4 +17,6 @@ public class ProjectManagement {
     public static Enterprise enterprise;
     public static ArrayList<Job> alljobs;
     public static ArrayList<FriendItem> allfriends;
+    public static String[] listDomainJobs = {"Bác sĩ", "Nhân viên bán hàng", "Marketing", "Kỹ sư máy tính", "Bất động sản", "Biên/phiên dịch", "Kỹ sư cơ khí",
+            "Kỹ sư vận tải", "Chuyên viên tư vấn", "Kỹ sư viễn thông", "Kỹ sư xây dựng", "Nhân viên phục vụ"};
 }

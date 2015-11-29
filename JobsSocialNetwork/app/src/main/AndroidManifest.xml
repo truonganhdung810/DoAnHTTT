@@ -52,6 +52,10 @@
             android:name=".main.enterprise.activity.EnterpriseMain"
             android:label="@string/title_activity_enterprise_main" >
         </activity>
+        <activity
+            android:name=".main.ActivitySendMessage"
+            android:label="@string/title_activity_activity_send_message" >
+        </activity>
     </application>
 
 </manifest>

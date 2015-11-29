@@ -16,7 +16,7 @@ public class FriendItem {
     @SerializedName("email")
     public String email;
 
-    @SerializedName("status")
-    public int status;
+    @SerializedName("state")
+    public int state;
 
 }

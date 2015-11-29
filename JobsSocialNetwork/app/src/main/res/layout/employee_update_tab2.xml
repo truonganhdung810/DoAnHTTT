@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvCVProfileTitleRow"
                     android:padding="10dp"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
                     <ImageView
                         android:id="@+id/imgvAvatarProfileCV"
@@ -176,7 +176,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/imgvEditProfileCV"
                         android:padding="10dp"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <TextView
                             android:id="@+id/tvProfileEditName"
@@ -193,8 +193,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@id/tvProfileEditName"
-                            android:singleLine="true" />
+                            android:layout_toRightOf="@id/tvProfileEditName" />
 
                         <TextView
                             android:id="@+id/tvProfileEditJob"
@@ -206,8 +205,8 @@
                             android:text="Công việc: "
                             android:textSize="14dp" />
 
-                        <EditText
-                            android:id="@+id/edtProfileEditJob"
+                        <Spinner
+                            android:id="@+id/spinnerProfileEditJob"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
@@ -222,7 +221,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
-                            android:layout_below="@id/edtProfileEditJob"
+                            android:layout_below="@id/spinnerProfileEditJob"
                             android:layout_marginTop="5dp"
                             android:text="Số điện thoại: "
                             android:textSize="14dp" />
@@ -232,7 +231,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:layout_below="@id/edtProfileEditJob"
+                            android:layout_below="@id/spinnerProfileEditJob"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="5dp"
                             android:layout_toRightOf="@id/tvProfileEditPhoneNumber"

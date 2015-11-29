@@ -10,6 +10,9 @@ public class Job {
     @SerializedName("email")
     public String email;
 
+    @SerializedName("enterprise")
+    public String name_enterprise;
+
     @SerializedName("name")
     public String name;
 
