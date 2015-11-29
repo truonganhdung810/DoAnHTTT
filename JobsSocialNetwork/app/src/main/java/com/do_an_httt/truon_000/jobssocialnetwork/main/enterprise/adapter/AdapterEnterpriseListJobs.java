@@ -1,4 +1,4 @@
-package com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise;
+package com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

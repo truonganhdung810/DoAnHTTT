@@ -1,47 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="96dp"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:padding="5dp">
 
-
-    <TextView
-        android:id="@+id/tvJobName"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:singleLine="true"
-        android:text="Job's name"
-        android:textSize="35px"
-        android:textStyle="bold" />
+        android:layout_gravity="center"
+        card_view:cardBackgroundColor="#ded992"
+        card_view:cardCornerRadius="5dp">
 
-    <TextView
-        android:id="@+id/tvEnterpriseName"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tvJobName"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:lines="2"
-        android:text="Enterprise's Name" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:text="10 mins ago"
-        android:textSize="20px" />
+            <TextView
+                android:id="@+id/tvJobName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="Job's name"
+                android:textSize="35px"
+                android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="10dp"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/detail_cv" />
+            <TextView
+                android:id="@+id/tvEnterpriseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvJobName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:lines="2"
+                android:text="Enterprise's Name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tvEnterpriseName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="10 mins ago"
+                android:textSize="20px" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/detail_cv" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
 </RelativeLayout>

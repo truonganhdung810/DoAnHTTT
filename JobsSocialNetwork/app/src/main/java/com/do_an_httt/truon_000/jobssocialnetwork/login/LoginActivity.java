@@ -12,7 +12,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
+import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.LoginAsyntask;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityMainView;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.activity.EnterpriseMain;
+import com.do_an_httt.truon_000.jobssocialnetwork.view.CustomToast;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
 
@@ -84,16 +87,22 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             case R.id.btLogin:
 
                 getStringFromEditText();
-//                if (checkStringFromEditText())
-//                    new LoginAsyntask(this).execute(email, password);
-//                else new CustomToast(LoginActivity.this, "Đăng nhập thất bại", 1000);
-                gotoMainView();
-
+                if (checkStringFromEditText())
+                    new LoginAsyntask(this).execute(email, password);
+                else new CustomToast(LoginActivity.this, "Đăng nhập thất bại", 1000);
+                // gotoEnterpriseMainView();
+                //gotoEmployeeMainView();
         }
     }
 
-    private void gotoMainView() {
+    private void gotoEmployeeMainView() {
         Intent intent = new Intent(this, ActivityMainView.class);
+        startActivity(intent);
+    }
+
+
+    private void gotoEnterpriseMainView() {
+        Intent intent = new Intent(this, EnterpriseMain.class);
         startActivity(intent);
     }
 

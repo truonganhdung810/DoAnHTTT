@@ -33,8 +33,8 @@ public class ActivityMainView extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.employee_main_view);
+
         initLayout();
         initDrawerPersonal();
         initPagerListJobs();

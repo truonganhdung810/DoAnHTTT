@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
+import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.GetAllFriendAsyntask;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.AdapterListFriends;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.FriendItem;
 
@@ -24,6 +26,7 @@ public class ActivityEmployeeListFriends extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_list_friends);
 
+        new GetAllFriendAsyntask(this).execute(ProjectManagement.employee.email);
         initLayout();
 
     }
@@ -36,7 +39,7 @@ public class ActivityEmployeeListFriends extends Activity {
         lvListFriend.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent  intentFriend = new Intent(ActivityEmployeeListFriends.this, ActivityEmployeePersonalPage.class);
+                Intent intentFriend = new Intent(ActivityEmployeeListFriends.this, ActivityEmployeePersonalPage.class);
                 intentFriend.putExtra("isMine", false);
                 startActivity(intentFriend);
             }

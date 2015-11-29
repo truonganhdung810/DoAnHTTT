@@ -2,6 +2,7 @@ package com.do_an_httt.truon_000.jobssocialnetwork;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Employee;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Enterprise;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.FriendItem;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
 
 import java.util.ArrayList;
@@ -15,5 +16,5 @@ public class ProjectManagement {
     public static Employee employee;
     public static Enterprise enterprise;
     public static ArrayList<Job> alljobs;
-
+    public static ArrayList<FriendItem> allfriends;
 }

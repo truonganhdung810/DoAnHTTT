@@ -6,11 +6,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
-import com.do_an_httt.truon_000.jobssocialnetwork.login.LoginActivity;
-import com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.EnterpriseMain;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityMainView;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.activity.EnterpriseMain;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Employee;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Enterprise;
 import com.do_an_httt.truon_000.jobssocialnetwork.view.CustomToast;
@@ -67,13 +66,13 @@ public class LoginAsyntask extends AsyncTask<String, Void, Boolean> {
     }
 
     private void startActivityEnterprise() {
-        Intent intentToEnterprise = new Intent(context, Enterprise.class);
+        Intent intentToEnterprise = new Intent(context, EnterpriseMain.class);
         context.startActivity(intentToEnterprise);
         ((Activity) context).finish();
     }
 
     private void startActivityEmployee() {
-        Intent intentToEmployee = new Intent(context, Employee.class);
+        Intent intentToEmployee = new Intent(context, ActivityMainView.class);
         context.startActivity(intentToEmployee);
         ((Activity) context).finish();
     }

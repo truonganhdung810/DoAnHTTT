@@ -37,6 +37,8 @@
         android:id="@+id/lvListFriend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tbrTopMenu"></ListView>
+        android:layout_below="@id/tbrTopMenu"
+        android:divider="@null"
+        android:dividerHeight="0dp"></ListView>
 
 </RelativeLayout>

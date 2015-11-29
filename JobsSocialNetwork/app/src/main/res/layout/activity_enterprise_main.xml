@@ -1,8 +1,9 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainDrawerEnterprise"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.EnterpriseMain">
+    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.activity.EnterpriseMain">
 
     <RelativeLayout
         android:id="@+id/rlt_enterprise_main_view"
@@ -17,6 +18,7 @@
             android:weightSum="5">
 
             <ImageView
+                android:id="@+id/imgvMenuTopPersonalEnterprise"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="0.7"
@@ -27,12 +29,21 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="4.3"
+                android:layout_weight="3.5"
                 android:gravity="center_vertical"
-                android:text="Các công việc đã đăng"
+                android:text="Danh sách công việc"
                 android:textColor="#ffffff"
                 android:textSize="35px"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgvCreateNewJobEnterprise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/create_new_job" />
 
         </TableRow>
 
@@ -40,19 +51,181 @@
             android:id="@+id/lvEnterpriseListJob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tbrTopMenu">
+            android:layout_below="@id/tbrTopMenu"
+            android:divider="@null"
+            android:dividerHeight="0dp">
 
         </ListView>
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:background="@color/cyan_tabbar"
-        android:id="@+id/rlt_enterprise_drawer_menu"
+    <ListView
+        android:id="@+id/lvSliderPersonalEnterprise"
         android:layout_width="300dp"
         android:layout_height="match_parent"
-        android:layout_gravity="start">
+        android:layout_gravity="start"
+        android:background="#fffec5">
 
+    </ListView>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#fffec5"
+        android:padding="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvCreateNewJobTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+                    android:text="Tạo một công việc mới"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dp"
+                    android:layout_alignLeft="@id/tvCreateNewJobTitle"
+                    android:layout_alignRight="@id/tvCreateNewJobTitle"
+                    android:layout_below="@id/tvCreateNewJobTitle"
+                    android:layout_marginTop="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/tvDomainJobLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCreateNewJobTitle"
+                    android:layout_marginTop="20dp"
+                    android:text="Ngành nghề:"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerDomainJobCreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDomainJobLabel"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:id="@+id/tvNameJobLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spinnerDomainJobCreate"
+                    android:layout_marginTop="10dp"
+                    android:text="Tên công việc:"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtNameJobCreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvNameJobLabel"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tvDateJobCreateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edtNameJobCreate"
+                    android:layout_marginTop="10dp"
+                    android:text="Ngày tạo:"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtDateJobCreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDateJobCreateLabel"
+                    android:layout_marginTop="5dp"
+                    android:enabled="false"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tvEndDateJobCreateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edtDateJobCreate"
+                    android:layout_marginTop="10dp"
+                    android:text="Ngày kết thúc:"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtEndDateJobCreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvEndDateJobCreateLabel"
+                    android:layout_marginTop="5dp"
+                    android:editable="false"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tvDescriptionJobCreateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edtEndDateJobCreate"
+                    android:layout_marginTop="10dp"
+                    android:text="Mô tả:"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtDesciptionJobCreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDescriptionJobCreateLabel"
+                    android:layout_marginTop="5dp"
+                    android:minLines="1" />
+
+                <TextView
+                    android:id="@+id/tvRequirementJobCreateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edtDesciptionJobCreate"
+                    android:layout_marginTop="10dp"
+                    android:text="Yêu cầu:"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtRequirementJobCreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvRequirementJobCreateLabel"
+                    android:layout_marginTop="5dp"
+                    android:minLines="1" />
+
+                <Button
+                    android:id="@+id/bt_create_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edtRequirementJobCreate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="CREATE JOB" />
+
+            </RelativeLayout>
+
+        </ScrollView>
     </RelativeLayout>
 
 

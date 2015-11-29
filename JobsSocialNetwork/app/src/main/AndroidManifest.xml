@@ -49,7 +49,7 @@
             android:name=".main.employee.activity.ActivityInbox"
             android:label="@string/title_activity_activity_inbox" />
         <activity
-            android:name=".main.enterprise.EnterpriseMain"
+            android:name=".main.enterprise.activity.EnterpriseMain"
             android:label="@string/title_activity_enterprise_main" >
         </activity>
     </application>
