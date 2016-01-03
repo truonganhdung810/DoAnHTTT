@@ -1,6 +1,7 @@
 package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityEmployeeMessageDetail;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.MessageReceiverItem;
 
 import java.util.ArrayList;
@@ -64,7 +66,7 @@ public class TabsPagerAdapterInbox extends PagerAdapter {
 
     private void initLayoutInboxReceiver(View view) {
 
-        rltMessageDetail = (RelativeLayout) view.findViewById(R.id.rltMessageReceiverDetail);
+       // rltMessageDetail = (RelativeLayout) view.findViewById(R.id.rltMessageReceiverDetail);
         lvMessageInboxReceiver = (ListView) view.findViewById(R.id.lvMessageInboxTab1Receiver);
         adapterMessageReciver = new AdapterListMessageReceiver(context, new ArrayList<MessageReceiverItem>());
         lvMessageInboxReceiver.setAdapter(adapterMessageReciver);
@@ -73,8 +75,9 @@ public class TabsPagerAdapterInbox extends PagerAdapter {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                lvMessageInboxReceiver.setVisibility(View.GONE);
-                rltMessageDetail.setVisibility(View.VISIBLE);
+                Intent intentToMessageDetail = new Intent(context, ActivityEmployeeMessageDetail.class);
+                context.startActivity(intentToMessageDetail);
+
 
             }
         });
@@ -82,7 +85,7 @@ public class TabsPagerAdapterInbox extends PagerAdapter {
     }
 
     public void doBackToListMessageFromDetail() {
-        lvMessageInboxReceiver.setVisibility(View.VISIBLE);
-        rltMessageDetail.setVisibility(View.GONE);
+       // lvMessageInboxReceiver.setVisibility(View.VISIBLE);
+       //  rltMessageDetail.setVisibility(View.GONE);
     }
 }

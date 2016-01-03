@@ -15,4 +15,6 @@
     <string name="title_activity_enterprise_main">EnterpriseMain</string>
     <string name="title_activity_activity_message_detail">ActivityMessageDetail</string>
     <string name="title_activity_activity_send_message">ActivitySendMessage</string>
+    <string name="title_activity_activity_employee_message_detail">ActivityEmployeeMessageDetail
+    </string>
 </resources>

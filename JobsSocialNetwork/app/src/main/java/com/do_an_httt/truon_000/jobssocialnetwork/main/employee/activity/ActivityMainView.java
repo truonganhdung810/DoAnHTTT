@@ -2,10 +2,13 @@ package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -29,6 +32,8 @@ public class ActivityMainView extends Activity {
     private TabsPagerAdapterMainViewListJobs tabsPagerAdapterMainViewListJobs;
 
     private TextView tvTopMenuEMployeeMain;
+    private ImageView imgvMainViewOpenMenu;
+    private DrawerLayout drlayoutMainView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +48,22 @@ public class ActivityMainView extends Activity {
     }
 
     private void initLayout() {
+
         tvTopMenuEMployeeMain = (TextView) findViewById(R.id.tvTopMenuEmployee);
-      //  tvTopMenuEMployeeMain.setText(ProjectManagement.employee.name);
+        imgvMainViewOpenMenu = (ImageView) findViewById(R.id.imgvMainViewOpenMenu);
+        drlayoutMainView = (DrawerLayout) findViewById(R.id.drlayoutMainView);
+        //  tvTopMenuEMployeeMain.setText(ProjectManagement.employee.name);
+
+        imgvMainViewOpenMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (drlayoutMainView.isDrawerOpen(GravityCompat.START)) {
+                    drlayoutMainView.closeDrawer(GravityCompat.START);
+                } else {
+                    drlayoutMainView.openDrawer(GravityCompat.START);
+                }
+            }
+        });
     }
 
 
@@ -64,7 +83,7 @@ public class ActivityMainView extends Activity {
         tvTopMenuEMployeeMain.setText("Danh sách công việc");
     }
 
-    public void setTextTopMenuChangeToInbox(){
+    public void setTextTopMenuChangeToInbox() {
         tvTopMenuEMployeeMain.setText("Hộp thư đến");
     }
 

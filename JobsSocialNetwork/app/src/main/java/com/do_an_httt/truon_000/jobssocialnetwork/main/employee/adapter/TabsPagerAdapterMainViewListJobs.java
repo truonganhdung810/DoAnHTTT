@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
-import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityJobDetail;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.JobItem;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityJobDetail;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.MessageReceiverItem;
 
 import java.util.ArrayList;
 
@@ -53,6 +55,7 @@ public class TabsPagerAdapterMainViewListJobs extends PagerAdapter {
 
             case 0:
                 view = LayoutInflater.from(context).inflate(R.layout.inbox_tab1_received, container, false);
+                initLayoutInboxReceiver(view);
                 break;
 
             case 1:
@@ -74,6 +77,26 @@ public class TabsPagerAdapterMainViewListJobs extends PagerAdapter {
 
         if (view != null) container.addView(view);
         return view;
+    }
+
+
+    private void initLayoutInboxReceiver(View view) {
+
+        final RelativeLayout rltMessageDetail = (RelativeLayout) view.findViewById(R.id.rltMessageReceiverDetail);
+        final ListView lvMessageInboxReceiver = (ListView) view.findViewById(R.id.lvMessageInboxTab1Receiver);AdapterListMessageReceiver  adapterMessageReciver = new AdapterListMessageReceiver(context, new ArrayList<MessageReceiverItem>());
+        lvMessageInboxReceiver.setAdapter(adapterMessageReciver);
+
+        lvMessageInboxReceiver.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                lvMessageInboxReceiver.setVisibility(View.GONE);
+                rltMessageDetail.setVisibility(View.VISIBLE);
+
+            }
+        });
+            
+
     }
 
     private void initTab1(View v) {

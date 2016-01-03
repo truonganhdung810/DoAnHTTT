@@ -29,7 +29,8 @@
             android:label="@string/title_activity_reset_password" />
         <activity
             android:name=".main.employee.activity.ActivityMainView"
-            android:label="@string/title_activity_main_view" />
+            android:label="@string/title_activity_main_view" >
+        </activity>
         <activity
             android:name=".main.employee.activity.ActivityJobDetail"
             android:label="@string/title_activity_job_detail" />
@@ -50,11 +51,13 @@
             android:label="@string/title_activity_activity_inbox" />
         <activity
             android:name=".main.enterprise.activity.EnterpriseMain"
-            android:label="@string/title_activity_enterprise_main" >
-        </activity>
+            android:label="@string/title_activity_enterprise_main" />
         <activity
             android:name=".main.ActivitySendMessage"
-            android:label="@string/title_activity_activity_send_message" >
+            android:label="@string/title_activity_activity_send_message" />
+        <activity
+            android:name=".main.employee.activity.ActivityEmployeeMessageDetail"
+            android:label="@string/title_activity_activity_employee_message_detail" >
         </activity>
     </application>
 
