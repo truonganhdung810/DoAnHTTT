@@ -7,6 +7,9 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Job {
 
+    @SerializedName("id")
+    public int id;
+
     @SerializedName("email")
     public String email;
 
@@ -30,5 +33,8 @@ public class Job {
 
     @SerializedName("requirement")
     public String requirement;
+
+    @SerializedName("number_cv")
+    public int number_cv;
 
 }

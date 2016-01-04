@@ -20,7 +20,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="#debb1e" />
+                    android:src="#2b9d8d" />
 
                 <ImageView
                     android:id="@+id/imgvAvatarEmployee"
@@ -30,7 +30,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@mipmap/avatar" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"

@@ -1,9 +1,8 @@
 package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity;
 
 import android.app.Activity;
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v4.view.ViewPager;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.TabsPagerAdapterInbox;
@@ -34,14 +33,5 @@ public class ActivityInbox extends Activity {
 
         slidingTabLayoutInbox.setViewPager(viewPagerInboxTab);
 
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (tabsPagerAdapterInbox.rltMessageDetail.getVisibility() == View.VISIBLE) {
-            tabsPagerAdapterInbox.doBackToListMessageFromDetail();
-            return;
-        }
-        super.onBackPressed();
     }
 }

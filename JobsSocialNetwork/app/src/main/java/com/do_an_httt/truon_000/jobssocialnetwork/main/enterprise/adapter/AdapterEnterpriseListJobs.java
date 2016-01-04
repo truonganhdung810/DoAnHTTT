@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
+import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
 
@@ -28,7 +30,7 @@ public class AdapterEnterpriseListJobs extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return arrayJob.size();
     }
 
     @Override
@@ -44,7 +46,17 @@ public class AdapterEnterpriseListJobs extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
+        Job item = arrayJob.get(position);
         convertView = LayoutInflater.from(context).inflate(R.layout.item_job_of_enterprise, parent, false);
+        TextView tvNameJob = (TextView) convertView.findViewById(R.id.tvJobName);
+        TextView tvEnterprise = (TextView) convertView.findViewById(R.id.tvEnterpriseName);
+        TextView tvDate = (TextView) convertView.findViewById(R.id.tvDateJobCreated);
+        TextView tvNumberCV = (TextView) convertView.findViewById(R.id.tv_enterprise_job_number_employee);
+
+        tvNameJob.setText(item.name);
+        tvEnterprise.setText(ProjectManagement.enterprise.name);
+        tvDate.setText(item.date);
+        tvNumberCV.setText(item.number_cv + "");
 
         return convertView;
     }

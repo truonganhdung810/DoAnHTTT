@@ -1,11 +1,11 @@
 package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
 
-public class ActivityEmployeeMessageDetail extends AppCompatActivity {
+public class ActivityEmployeeMessageDetail extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

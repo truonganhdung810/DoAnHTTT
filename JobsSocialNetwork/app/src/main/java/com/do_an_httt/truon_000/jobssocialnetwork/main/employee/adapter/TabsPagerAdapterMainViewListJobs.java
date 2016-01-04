@@ -9,12 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 
+import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
-import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.JobItem;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityEmployeeMessageDetail;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityJobDetail;
-import com.do_an_httt.truon_000.jobssocialnetwork.types.MessageReceiverItem;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
+import com.do_an_httt.truon_000.jobssocialnetwork.view.CustomToast;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,8 @@ import java.util.ArrayList;
 public class TabsPagerAdapterMainViewListJobs extends PagerAdapter {
 
     private Context context;
+    public ListView listJobsRecent;
+    public JobsRecentAdapter jobRecentAdapter;
 
     public TabsPagerAdapterMainViewListJobs(Context context) {
 
@@ -82,47 +85,53 @@ public class TabsPagerAdapterMainViewListJobs extends PagerAdapter {
 
     private void initLayoutInboxReceiver(View view) {
 
-        final RelativeLayout rltMessageDetail = (RelativeLayout) view.findViewById(R.id.rltMessageReceiverDetail);
-        final ListView lvMessageInboxReceiver = (ListView) view.findViewById(R.id.lvMessageInboxTab1Receiver);AdapterListMessageReceiver  adapterMessageReciver = new AdapterListMessageReceiver(context, new ArrayList<MessageReceiverItem>());
+        ListView lvMessageInboxReceiver = (ListView) view.findViewById(R.id.lvMessageInboxTab1Receiver);
+        AdapterListMessageReceiver adapterMessageReciver = new AdapterListMessageReceiver(context, new ProjectManagement().listMessage);
         lvMessageInboxReceiver.setAdapter(adapterMessageReciver);
 
         lvMessageInboxReceiver.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                lvMessageInboxReceiver.setVisibility(View.GONE);
-                rltMessageDetail.setVisibility(View.VISIBLE);
+                Intent intentToMessageDetail = new Intent(context, ActivityJobDetail.class);
+                intentToMessageDetail.putExtra("job_id", ProjectManagement.listMessage.get(position).id);
+                context.startActivity(intentToMessageDetail);
 
             }
         });
-            
+
 
     }
 
-    private void initTab1(View v) {
-        ListView listJobsRecent = (ListView) v.findViewById(R.id.lvJobsRecent);
-        JobsRecentAdapter jobRecentAdapter = new JobsRecentAdapter(context, new ArrayList<JobItem>());
+    public void initTab1(View v) {
+        listJobsRecent = (ListView) v.findViewById(R.id.lvJobsRecent);
+
+    }
+
+    public void setJobToListView(ArrayList<Job> listAllJobs) {
+        jobRecentAdapter = new JobsRecentAdapter(context, listAllJobs);
         listJobsRecent.setAdapter(jobRecentAdapter);
 
         listJobsRecent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intentToJobDetail = new Intent(context, ActivityJobDetail.class);
+                intentToJobDetail.putExtra("job_id", ProjectManagement.alljobs.get(position).id);
+                new CustomToast(context, "Before " + ProjectManagement.alljobs.get(position).id + "", 500);
                 context.startActivity(intentToJobDetail);
             }
         });
-
     }
 
     private void initTab2(View v) {
         ListView listJobsRecent = (ListView) v.findViewById(R.id.lvJobsRecent);
-        JobsRecentAdapter jobRecentAdapter = new JobsRecentAdapter(context, new ArrayList<JobItem>());
+        JobsRecentAdapter jobRecentAdapter = new JobsRecentAdapter(context, new ArrayList<Job>());
         listJobsRecent.setAdapter(jobRecentAdapter);
     }
 
     private void initTab3(View v) {
         ListView listJobsRecent = (ListView) v.findViewById(R.id.lvJobsRecent);
-        JobsRecentAdapter jobRecentAdapter = new JobsRecentAdapter(context, new ArrayList<JobItem>());
+        JobsRecentAdapter jobRecentAdapter = new JobsRecentAdapter(context, new ArrayList<Job>());
         listJobsRecent.setAdapter(jobRecentAdapter);
     }
 

@@ -5,9 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
-import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.JobItem;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
 
 import java.util.ArrayList;
 
@@ -18,9 +19,9 @@ public class JobsRecentAdapter extends BaseAdapter {
 
 
     private Context context;
-    private ArrayList<JobItem> listJobs;
+    private ArrayList<Job> listJobs;
 
-    public JobsRecentAdapter(Context context, ArrayList<JobItem> listJobs) {
+    public JobsRecentAdapter(Context context, ArrayList<Job> listJobs) {
 
         this.context = context;
         this.listJobs = listJobs;
@@ -29,7 +30,7 @@ public class JobsRecentAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return listJobs.size();
     }
 
     @Override
@@ -45,8 +46,16 @@ public class JobsRecentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        convertView = LayoutInflater.from(context).inflate(R.layout.item_job, parent, false);
+        Job item = listJobs.get(position);
 
+        convertView = LayoutInflater.from(context).inflate(R.layout.item_job, parent, false);
+        TextView tvJobName = (TextView) convertView.findViewById(R.id.tvJobName);
+        TextView tvJobEnterprise = (TextView) convertView.findViewById(R.id.tvEnterpriseName);
+        TextView tvDateStart = (TextView) convertView.findViewById(R.id.tvDateJobCreated);
+
+        tvJobName.setText(item.name);
+        tvJobEnterprise.setText(item.name_enterprise);
+        tvDateStart.setText(item.date);
 
         return convertView;
     }

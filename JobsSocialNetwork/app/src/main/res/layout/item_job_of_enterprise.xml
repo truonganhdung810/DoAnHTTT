@@ -10,7 +10,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        card_view:cardBackgroundColor="#ded992"
         card_view:cardCornerRadius="10dp">
 
 
@@ -40,6 +39,7 @@
                 android:text="Enterprise's Name" />
 
             <TextView
+                android:id="@+id/tvDateJobCreated"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

@@ -8,10 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 
+import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityEmployeeMessageDetail;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityJobDetail;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.MessageReceiverItem;
 
 import java.util.ArrayList;
@@ -26,7 +27,6 @@ public class TabsPagerAdapterInbox extends PagerAdapter {
     // layout message receiver
     private ListView lvMessageInboxReceiver;
     private AdapterListMessageReceiver adapterMessageReciver;
-    public RelativeLayout rltMessageDetail;
 
     public TabsPagerAdapterInbox(Context context) {
         this.context = context;
@@ -66,16 +66,15 @@ public class TabsPagerAdapterInbox extends PagerAdapter {
 
     private void initLayoutInboxReceiver(View view) {
 
-       // rltMessageDetail = (RelativeLayout) view.findViewById(R.id.rltMessageReceiverDetail);
         lvMessageInboxReceiver = (ListView) view.findViewById(R.id.lvMessageInboxTab1Receiver);
-        adapterMessageReciver = new AdapterListMessageReceiver(context, new ArrayList<MessageReceiverItem>());
+        adapterMessageReciver = new AdapterListMessageReceiver(context, ProjectManagement.listMessage);
         lvMessageInboxReceiver.setAdapter(adapterMessageReciver);
 
         lvMessageInboxReceiver.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intentToMessageDetail = new Intent(context, ActivityEmployeeMessageDetail.class);
+                Intent intentToMessageDetail = new Intent(context, ActivityJobDetail.class);
                 context.startActivity(intentToMessageDetail);
 
 
@@ -84,8 +83,4 @@ public class TabsPagerAdapterInbox extends PagerAdapter {
 
     }
 
-    public void doBackToListMessageFromDetail() {
-       // lvMessageInboxReceiver.setVisibility(View.VISIBLE);
-       //  rltMessageDetail.setVisibility(View.GONE);
-    }
 }

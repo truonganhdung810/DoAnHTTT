@@ -17,4 +17,5 @@
     <string name="title_activity_activity_send_message">ActivitySendMessage</string>
     <string name="title_activity_activity_employee_message_detail">ActivityEmployeeMessageDetail
     </string>
+    <string name="title_activity_activity_appliers">ActivityAppliers</string>
 </resources>

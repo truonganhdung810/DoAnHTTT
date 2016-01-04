@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.activity.ActivityAppliers">
+
+    <TableRow
+        android:id="@+id/tbrTopMenu"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/cyan_tabbar"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.7"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.3"
+            android:gravity="center_vertical"
+            android:text="Appliers"
+            android:textColor="#ffffff"
+            android:textSize="35px"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <ListView
+        android:id="@+id/lvAppliers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbrTopMenu"
+        android:divider="@null"
+        android:dividerHeight="0dp"></ListView>
+
+</RelativeLayout>

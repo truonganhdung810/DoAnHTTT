@@ -14,6 +14,7 @@ public class ActivityEmployeeUpdateInformation extends Activity {
     private SlidingTabLayoutEmployeeUpdate slidingTabLayout;
     private TabPagerAdapterEmployeeUpdate tabsPagerAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,6 @@ public class ActivityEmployeeUpdateInformation extends Activity {
         pagerEmployeeUpdateInfor.setAdapter(tabsPagerAdapter);
 
         slidingTabLayout.setViewPager(pagerEmployeeUpdateInfor);
-
 
     }
 }

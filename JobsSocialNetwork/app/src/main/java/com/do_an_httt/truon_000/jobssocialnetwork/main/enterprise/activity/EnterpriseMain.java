@@ -3,11 +3,12 @@ package com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.activity;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -19,11 +20,10 @@ import android.widget.Spinner;
 import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
 import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.CreateNewJobAsyntask;
+import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.GetAllEnterpriseJobs;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.enterprise.adapter.AdapterEnterpriseListJobs;
-import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
 import com.do_an_httt.truon_000.jobssocialnetwork.view.CustomToast;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 public class EnterpriseMain extends Activity implements View.OnClickListener {
@@ -52,6 +52,7 @@ public class EnterpriseMain extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_enterprise_main);
 
         initListView();
+        new GetAllEnterpriseJobs(this, lvEnterpriseJobs).execute(ProjectManagement.enterprise.email);
     }
 
     private void initListView() {
@@ -64,8 +65,16 @@ public class EnterpriseMain extends Activity implements View.OnClickListener {
         imgvCreateNewJobOpen = (ImageView) findViewById(R.id.imgvCreateNewJobEnterprise);
 
         lvEnterpriseJobs = (ListView) findViewById(R.id.lvEnterpriseListJob);
-        adapterEnterpriseListJobs = new AdapterEnterpriseListJobs(this, new ArrayList<Job>());
-        lvEnterpriseJobs.setAdapter(adapterEnterpriseListJobs);
+        lvEnterpriseJobs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(EnterpriseMain.this, ActivityAppliers.class);
+                int job_id = ProjectManagement.alljobs.get(position).id;
+                intent.putExtra("job_id", job_id);
+                startActivity(intent);
+            }
+        });
+
 
         // layout create new job
         edtNameJobCreate = (EditText) findViewById(R.id.edtNameJobCreate);

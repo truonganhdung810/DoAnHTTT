@@ -27,7 +27,7 @@ public class ActivityEmployeeListFriends extends Activity {
         setContentView(R.layout.activity_employee_list_friends);
 
         initLayout();
-        new GetAllFriendAsyntask(this, lvListFriend).execute(ProjectManagement.employee.email);
+        new GetAllFriendAsyntask(false, this, lvListFriend).execute(ProjectManagement.employee.email);
 
     }
 

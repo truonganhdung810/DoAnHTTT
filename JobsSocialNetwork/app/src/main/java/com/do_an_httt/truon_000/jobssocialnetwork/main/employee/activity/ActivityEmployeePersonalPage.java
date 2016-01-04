@@ -8,7 +8,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
+import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.GetCVContentAsyntask;
 
 public class ActivityEmployeePersonalPage extends Activity implements View.OnClickListener {
 
@@ -88,7 +90,8 @@ public class ActivityEmployeePersonalPage extends Activity implements View.OnCli
     }
 
     private void goActivityCVPreview() {
-        Intent intent = new Intent(this, ActivityEmployeeCVPreview.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, ActivityEmployeeCVPreview.class);
+//        startActivity(intent);
+        new GetCVContentAsyntask(this).execute(ProjectManagement.employee.email);
     }
 }

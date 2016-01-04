@@ -48,6 +48,7 @@ public class AdapterListFriends extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         convertView = LayoutInflater.from(context).inflate(R.layout.employee_item_friend, parent, false);
         TextView tvNameFriend = (TextView) convertView.findViewById(R.id.tvNameListFriends);
         TextView tvEmailFriend = (TextView) convertView.findViewById(R.id.tvEmailListFriend);

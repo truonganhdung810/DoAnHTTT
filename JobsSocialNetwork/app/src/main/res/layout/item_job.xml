@@ -38,6 +38,7 @@
                 android:text="Enterprise's Name" />
 
             <TextView
+                android:id="@+id/tvDateJobCreated"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -54,7 +55,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
                 android:scaleType="fitCenter"
-                android:src="@mipmap/detail_cv" />
+                android:src="@mipmap/detail_cv"
+                android:visibility="invisible" />
 
         </RelativeLayout>
 

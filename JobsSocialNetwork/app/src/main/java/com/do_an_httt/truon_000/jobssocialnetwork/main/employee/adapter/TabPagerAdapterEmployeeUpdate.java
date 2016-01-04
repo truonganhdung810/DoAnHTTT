@@ -14,11 +14,13 @@ import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
 import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.UpdateCVAsyntask;
 import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.UpdateProfileAsyntask;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.CV;
 
 /**
  * Created by truon_000 on 11/20/2015.
@@ -41,6 +43,12 @@ public class TabPagerAdapterEmployeeUpdate extends PagerAdapter implements View.
     private Button btCVUpdateSubmit;
 
     private String name, job, phone, address, contact, education, experience, skill, other;
+
+    private String job_display, edu_time1, edu_time1_content, edu_time2, edu_time2_content, ex_time1, ex_time1_content, ex_time2,
+            ex_time2_content, skill1, skill2;
+    private TextView tvProfileName, tvProfileJob, tvProfilePhone, tvProfileAddress, tvProfileContact, tvEduTime1, tvEduTime1Content,
+            tvEduTime2, tvEduTime2Content, tvExTime1, tvExTime1Content, tvExTime2, tvExTime2Content, tvSkill1, tvSkill2, tvOther;
+
 
 
     //Layout information update
@@ -179,6 +187,8 @@ public class TabPagerAdapterEmployeeUpdate extends PagerAdapter implements View.
         btCVUpdateSubmit.setOnClickListener(this);
 
 
+
+
     }
 
     @Override
@@ -250,11 +260,11 @@ public class TabPagerAdapterEmployeeUpdate extends PagerAdapter implements View.
         address = edtProfileAddress.getText().toString().trim();
         contact = edtProfileContact.getText().toString().trim();
 
-        education = edtEducationTime1.getText().toString().trim() + "???" + edtEducationGraduateAtTime1.getText().toString().trim()
-                + "???" + edtEducationTime2.getText().toString().trim() + "???" + edtEducationGraduateAtTime2.getText().toString().trim();
-        experience = edtExperienceTime1.getText().toString().trim() + "???" + edtExperienceAtTime1.getText().toString().trim()
-                + "???" + edtExperienceTime2.getText().toString().trim() + "???" + edtExperienceAtTime2.getText().toString().trim();
-        skill = edtSkillForeignLanguage.getText().toString().trim() + "???" + edtSkillSoftSkill.getText().toString().trim();
+        education = edtEducationTime1.getText().toString().trim() + ProjectManagement.separator_string + edtEducationGraduateAtTime1.getText().toString().trim()
+                + ProjectManagement.separator_string + edtEducationTime2.getText().toString().trim() + ProjectManagement.separator_string + edtEducationGraduateAtTime2.getText().toString().trim();
+        experience = edtExperienceTime1.getText().toString().trim() + ProjectManagement.separator_string + edtExperienceAtTime1.getText().toString().trim()
+                + ProjectManagement.separator_string + edtExperienceTime2.getText().toString().trim() + ProjectManagement.separator_string + edtExperienceAtTime2.getText().toString().trim();
+        skill = edtSkillForeignLanguage.getText().toString().trim() + ProjectManagement.separator_string + edtSkillSoftSkill.getText().toString().trim();
         other = edtOtherContent.getText().toString().trim();
     }
 
@@ -271,5 +281,77 @@ public class TabPagerAdapterEmployeeUpdate extends PagerAdapter implements View.
     private void showEditRelativeLayout(RelativeLayout rltEdit) {
         if (rltEdit.getVisibility() == View.VISIBLE) rltEdit.setVisibility(View.GONE);
         else rltEdit.setVisibility(View.VISIBLE);
+    }
+
+    private void setContentToCV(View view) {
+
+        getContentFromData();
+
+        tvProfileName = (TextView) view.findViewById(R.id.tvNameProfileCV);
+        tvProfileAddress = (TextView) view.findViewById(R.id.tvAddressProfileCV);
+        tvProfileJob = (TextView) view.findViewById(R.id.tvJobProfileCV);
+        tvProfileContact = (TextView) view.findViewById(R.id.tvEmailContactProfileCV);
+        tvProfilePhone = (TextView) view.findViewById(R.id.tvPhoneNumberProfileCV);
+
+        tvEduTime1 = (TextView) view.findViewById(R.id.tvEducationTime1);
+        tvEduTime1Content = (TextView) view.findViewById(R.id.tvEducationGraduateAtTime1);
+        tvEduTime2 = (TextView) view.findViewById(R.id.tvEducationTime2);
+        tvEduTime2Content = (TextView) view.findViewById(R.id.tvEducationGraduateAtTime2);
+
+        tvExTime1 = (TextView) view.findViewById(R.id.tvExperienceTime1);
+        tvExTime1Content = (TextView) view.findViewById(R.id.tvExperienceAtTime1);
+        tvExTime2 = (TextView) view.findViewById(R.id.tvExperienceTime2);
+        tvExTime2Content = (TextView) view.findViewById(R.id.tvExperienceAtTime2);
+
+        tvSkill1 = (TextView) view.findViewById(R.id.tvSkillForeignLanguage);
+        tvSkill2 = (TextView) view.findViewById(R.id.tvSkillSoft);
+
+        tvOther = (TextView) view.findViewById(R.id.tvOtherContent);
+
+        tvProfileName.setText(ProjectManagement.cvContent.name);
+        tvProfilePhone.setText(ProjectManagement.cvContent.phone);
+        int index_job = Integer.parseInt(ProjectManagement.cvContent.job);
+        job_display = ProjectManagement.listDomainJobs[index_job];
+        tvProfileJob.setText(job_display);
+        tvProfileContact.setText(ProjectManagement.cvContent.email);
+        tvProfileAddress.setText(ProjectManagement.cvContent.address);
+
+        tvEduTime1.setText(edu_time1);
+        tvEduTime2.setText(edu_time2);
+        tvEduTime1Content.setText(edu_time1_content);
+        tvEduTime2Content.setText(edu_time2_content);
+
+        tvExTime1.setText(ex_time1);
+        tvExTime2.setText(ex_time2);
+        tvExTime1Content.setText(ex_time1_content);
+        tvExTime2Content.setText(ex_time2_content);
+
+        tvSkill1.setText(skill1);
+        tvSkill2.setText(skill2);
+
+        tvOther.setText(ProjectManagement.cvContent.other);
+
+
+    }
+
+    private void getContentFromData() {
+
+        CV data = ProjectManagement.cvContent;
+        String[] edus = data.education.split(ProjectManagement.separator_string);
+        edu_time1 = edus[0];
+        edu_time1_content = edus[1];
+        edu_time2 = edus[2];
+        edu_time2_content = edus[3];
+
+        String[] exps = data.experience.split(ProjectManagement.separator_string);
+        ex_time1 = exps[0];
+        ex_time1_content = exps[1];
+        ex_time2 = exps[2];
+        ex_time2_content = exps[3];
+
+        String[] skills = data.skill.split(ProjectManagement.separator_string);
+        skill1 = skills[0];
+        skill2 = skills[1];
+
     }
 }

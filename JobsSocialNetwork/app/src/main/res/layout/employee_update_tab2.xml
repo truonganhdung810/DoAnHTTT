@@ -55,7 +55,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/avatar" />
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -119,6 +119,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tvAddressProfileCV"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"

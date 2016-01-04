@@ -1,9 +1,12 @@
 package com.do_an_httt.truon_000.jobssocialnetwork;
 
+import com.do_an_httt.truon_000.jobssocialnetwork.types.Applier;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.CV;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Employee;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Enterprise;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.FriendItem;
 import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.Message;
 
 import java.util.ArrayList;
 
@@ -19,4 +22,10 @@ public class ProjectManagement {
     public static ArrayList<FriendItem> allfriends;
     public static String[] listDomainJobs = {"Bác sĩ", "Nhân viên bán hàng", "Marketing", "Kỹ sư máy tính", "Bất động sản", "Biên/phiên dịch", "Kỹ sư cơ khí",
             "Kỹ sư vận tải", "Chuyên viên tư vấn", "Kỹ sư viễn thông", "Kỹ sư xây dựng", "Nhân viên phục vụ"};
+    public static Job jobDetail;
+    public static ArrayList<Applier> allApplier;
+    public static CV cvContent;
+    public static String separator_string = "---";
+    public static ArrayList<Message> listMessage;
+
 }

@@ -59,6 +59,10 @@
             android:name=".main.employee.activity.ActivityEmployeeMessageDetail"
             android:label="@string/title_activity_activity_employee_message_detail" >
         </activity>
+        <activity
+            android:name=".main.enterprise.activity.ActivityAppliers"
+            android:label="@string/title_activity_activity_appliers" >
+        </activity>
     </application>
 
 </manifest>

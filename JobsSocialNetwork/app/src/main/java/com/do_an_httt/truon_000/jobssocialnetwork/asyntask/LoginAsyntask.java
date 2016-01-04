@@ -72,9 +72,9 @@ public class LoginAsyntask extends AsyncTask<String, Void, Boolean> {
     }
 
     private void startActivityEmployee() {
-        Intent intentToEmployee = new Intent(context, ActivityMainView.class);
-        context.startActivity(intentToEmployee);
-        ((Activity) context).finish();
+
+        new GetAllMessageAsyntask(context).execute(ProjectManagement.employee.email);
+
     }
 
     @Override

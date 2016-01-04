@@ -1,4 +1,4 @@
-package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity;
+package com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter;
 
 import android.app.Activity;
 import android.content.Context;

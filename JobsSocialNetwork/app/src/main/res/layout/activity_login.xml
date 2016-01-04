@@ -90,7 +90,6 @@
                 android:hint="Enter email here"
                 android:paddingBottom="5dp"
                 android:singleLine="true"
-                android:text="truonganhdung810@gmail.com"
                 android:textColor="#ffffff" />
 
         </TableRow>
@@ -127,6 +126,7 @@
 
 
         <TableRow
+            android:visibility="gone"
             android:id="@+id/tbrRememberLogin"
             android:layout_width="match_parent"
             android:layout_height="50dp"

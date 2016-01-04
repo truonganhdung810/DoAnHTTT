@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.R;
 import com.do_an_httt.truon_000.jobssocialnetwork.asyntask.GetAllJobsAsyntask;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.AdapterEmployeePersonal;
 import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.adapter.TabsPagerAdapterMainViewListJobs;
 import com.do_an_httt.truon_000.jobssocialnetwork.view.SlidingTabLayout;
 
@@ -28,8 +29,8 @@ public class ActivityMainView extends Activity {
 
     // Tabs and view pager
     private ViewPager pagerListJobs;
-    private SlidingTabLayout slidingTabLayout;
-    private TabsPagerAdapterMainViewListJobs tabsPagerAdapterMainViewListJobs;
+    public SlidingTabLayout slidingTabLayout;
+    public TabsPagerAdapterMainViewListJobs tabsPagerAdapterMainViewListJobs;
 
     private TextView tvTopMenuEMployeeMain;
     private ImageView imgvMainViewOpenMenu;
@@ -80,6 +81,7 @@ public class ActivityMainView extends Activity {
     }
 
     public void setTextTopMenuChangeToListJobs() {
+        new GetAllJobsAsyntask(this).execute();
         tvTopMenuEMployeeMain.setText("Danh sách công việc");
     }
 

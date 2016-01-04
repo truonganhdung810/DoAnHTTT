@@ -4,19 +4,19 @@ package com.do_an_httt.truon_000.jobssocialnetwork.main;
  * Created by truon_000 on 11/29/2015.
  */
 
-import java.util.ArrayList;
-
-import com.do_an_httt.truon_000.jobssocialnetwork.R;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
+
+import com.do_an_httt.truon_000.jobssocialnetwork.R;
+
+import java.util.ArrayList;
 
 public class DropDownListAdapter extends BaseAdapter {
 

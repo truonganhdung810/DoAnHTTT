@@ -2,29 +2,27 @@ package com.do_an_httt.truon_000.jobssocialnetwork.asyntask;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
 import com.do_an_httt.truon_000.jobssocialnetwork.ProjectManagement;
-import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityMainView;
-import com.do_an_httt.truon_000.jobssocialnetwork.types.Job;
+import com.do_an_httt.truon_000.jobssocialnetwork.main.employee.activity.ActivityEmployeeCVPreview;
+import com.do_an_httt.truon_000.jobssocialnetwork.types.CV;
+import com.do_an_httt.truon_000.jobssocialnetwork.view.CustomToast;
 import com.example.nguyenhuungoc.connecttophp.ConnectToPHP;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 
 /**
- * Created by truon_000 on 11/24/2015.
+ * Created by truon_000 on 1/4/2016.
  */
-public class GetAllJobsAsyntask extends AsyncTask<String, Void, Boolean> {
+public class GetCVContentAsyntask extends AsyncTask<String, Void, Boolean> {
 
     ProgressDialog dialog;
     String json;
     Context context;
 
-    public GetAllJobsAsyntask(Context context) {
+    public GetCVContentAsyntask(Context context) {
         this.context = context;
     }
 
@@ -43,28 +41,26 @@ public class GetAllJobsAsyntask extends AsyncTask<String, Void, Boolean> {
 
         if (result) {
             Log.d("Result", json);
-            Type jobs = new TypeToken<ArrayList<Job>>() {
-            }.getType();
-            ProjectManagement.alljobs = (new Gson()).fromJson(json, jobs);
-            Log.d("Result", ProjectManagement.alljobs.size() + "");
-            ((ActivityMainView) context).tabsPagerAdapterMainViewListJobs.setJobToListView(ProjectManagement.alljobs);
-
-            for (Job job : ProjectManagement.alljobs) {
-                //   Log.d("Result", job.description);
-                Log.d("Result", job.name_enterprise);
-            }
+            ProjectManagement.cvContent = (new Gson()).fromJson(json, CV.class);
+            Intent intent = new Intent(context, ActivityEmployeeCVPreview.class);
+            context.startActivity(intent);
 
         } else {
             //that bai;
             Log.d("Result", "That bai");
+            new CustomToast(context, "Load cv that bai", 500);
         }
     }
 
     @Override
     protected Boolean doInBackground(String... params) {
 
+        String email = params[0];
+
         try {
-            json = ConnectToPHP.connect(ProjectManagement.BASE_URL + "get_job.php");
+            String[] keys = new String[]{"email"};
+            String[] values = new String[]{email};
+            json = ConnectToPHP.connect(ProjectManagement.BASE_URL + "get_cv.php", keys, values);
             if (json.trim().equals("fail")) {
                 return false;
             }
@@ -74,4 +70,5 @@ public class GetAllJobsAsyntask extends AsyncTask<String, Void, Boolean> {
 
         return true;
     }
+
 }
